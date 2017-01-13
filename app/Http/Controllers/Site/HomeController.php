@@ -20,10 +20,9 @@ class HomeController extends SiteController
 
 	function index()
 	{	
-		// $this->data['data']['charity']    = $this->home->getCharity(); 
 		
 		$hashtag    = 'postgoodies';
-		// $igResults  = json_decode(file_get_contents('https://www.instagram.com/explore/tags/'.$hashtag.'/?__a=1'));
+		$igResults  = json_decode(file_get_contents('https://www.instagram.com/explore/tags/'.$hashtag.'/?__a=1'));
 
 		if(!empty($igResults->tag->top_posts->nodes))
 		{
