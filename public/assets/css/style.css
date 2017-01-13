@@ -1,0 +1,778 @@
+/*
+Theme Name: 
+Theme URI: http://
+Author: 
+Author URI: http://
+Description: Main Stylesheet
+*/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video                { background:transparent; border:0; margin:0; padding:0; }
+
+
+
+/* =Fonts
+-------------------------------------------------------------- */
+
+
+
+/* =Structure
+-------------------------------------------------------------- */
+
+/* The main theme structure */
+
+
+
+/* =Global Elements
+-------------------------------------------------------------- */
+html{
+	height: 100%;
+}
+body
+{
+	background: none repeat scroll 0 0 #f5f5f5 !important;
+	font-family: "Arial",'helvetica',sans-serif;
+	font-weight: 400;
+	min-height: 100%;
+	padding-bottom: 6rem !important;
+	position: relative;
+}
+a
+{
+	font-weight:normal;
+}
+a:hover
+{
+	text-decoration:none;
+}
+
+label
+{
+	font-weight:400;
+}
+.fa
+{
+	font-family: FontAwesome,"Arial",'helvetica';
+}
+.pr{
+    position: relative;
+}
+.title{
+	font-weight: 800;
+}
+.cursor
+{
+	cursor: pointer;
+}
+
+.no_padding
+{
+	padding: 0px;
+}
+.no_margin
+{
+	margin: 0px;
+}
+
+.c_padding
+{
+	padding:20px 10px;
+}
+.pd
+{
+	padding:10px;
+}
+.c_paddingSides
+{
+	padding:0 10px;
+}
+
+.c_paddingTitle
+{
+	padding: 20px 10px 0
+}
+
+.mt
+{
+    margin-top: 25px;
+}
+.mb
+{
+    margin-bottom: 25px;
+}
+
+.white-panel 
+{
+	background: none repeat scroll 0 0 #ffffff;
+    text-align: left;
+}
+
+.header-title
+{
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.pn 
+{
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    height: 250px;
+}
+.pn-content 
+{
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    min-height: 100px;
+}
+
+.btn-input
+{
+   display: block;
+}
+
+.btn-input .btn.form-control 
+{
+	text-align: left;
+}
+
+.btn-input .btn.form-control span:first-child 
+{
+   left: 10px;
+   overflow: hidden;
+   position: absolute;
+   right: 25px;
+}
+
+.btn-input .btn.form-control .caret 
+{
+   margin-top: -1px;
+   position: absolute;
+   right: 10px;
+   top: 50%;
+}
+
+.dropdown-menu.c_customdropdown
+{
+	width:100%;
+}
+
+.field {
+    display: block;
+    padding: 0;
+    position: relative;
+}
+.field .select {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.field .select select {
+    -moz-appearance: none;
+    width: 100%;
+}
+.field .select > select {
+    padding: 6px 8px;
+}
+.field input[type="text"], .field input[type="password"], .field input[type="email"], .field textarea, .field .select > select {
+	border: 1px solid #00B3E4;
+    border-radius: 0;
+    display: block;
+    outline: 0 none;
+    transition: border 0.3s ease-in-out 0s;
+}
+.field .select span {
+    color: #00B3E4;
+    font-size: 16px;
+    margin-top: 8px;
+    position: absolute;
+    right: 10px;
+    z-index: 10;
+}
+
+.select select option {
+    padding: 10px;
+}
+
+.field select, .field select:focus, .field select:active{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-bottom: 1px solid #00B3E4;
+  outline: none;
+}
+
+.select:after {
+    box-sizing: border-box;
+    color: #A6A6A4;
+    content:"\f107";
+    font-family: FontAwesome;
+    font-size: 24px;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+}
+
+.error{
+    color: #ff7878 !important;
+    font-size: smaller;
+}
+
+.validate-password
+{
+    background: #199abc none repeat scroll 0 0;
+    border-radius: 0 5px 5px 0;
+    color: #FFFFFF;
+    height: 34px;
+    line-height: 25px;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 32px;
+    width: 90px;
+    z-index: 1;
+}
+
+.upload{
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #5d5d5d;
+    overflow: hidden;
+    padding: 10px 15px;
+    position: relative;
+    width: 100%;
+}
+.upload input[type='file']{
+    border: 1px solid #000;
+    cursor: pointer;
+    left: 0;
+    opacity: 0;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+} 
+.upload label{
+    margin-left: 9px;
+    position: absolute;
+    top: 2px;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+
+/* =Menu
+-------------------------------------------------------------- */
+
+.navbar-default
+{
+    background-image: linear-gradient(to bottom, #17633d 0px, #11492d 100%);
+    border-radius: 0;
+	border:none;
+	border-bottom:1px solid #11492d;
+    color: #eaeaea !important;
+	margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+	z-index:100;
+}
+.navbar-default .navbar-brand 
+{
+    color: #eaeaea;
+    margin-left: 10px !important;
+}
+
+.navbar-default .btn-default:hover, .navbar-default .btn-default:focus
+{
+	background: none repeat scroll 0 0 transparent;
+	border-color: #11492d;
+	background-color: #2bb451;
+    color: #eaeaea;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+{
+	color:#eaeaea;
+}
+
+.navbar-nav > li{
+    cursor: pointer;
+    padding: 10px 25px;
+    line-height: 32px;
+}
+
+.navbar-nav > li:hover, .navbar-nav > li.active{
+    color: #eaeaea !important;
+    background: #2bb451 !important;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background: #eaeaea !important;
+}
+.navbar-nav > li > a{
+    color: #eaeaea !important;
+}
+.navbar-nav > li > a:hover{
+    color: #eaeaea !important;
+    background: #2bb451 !important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+    background: #2bb451;
+}
+
+.navbar-default button{
+    margin-right: 25px;
+}
+.navbar-default button, .navbar-default .btn-logout
+{
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #ddd;
+    color: #eaeaea;
+    text-shadow: none;
+	outline: medium none;
+}
+.navbar-default .btn-logout{
+    margin: 10px 0;
+};
+.navbar-default .navbar-toggle .icon-bar
+{
+	background-color:#FFFFFF;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus 
+{
+    background-color: transparent;
+    border-color: #888;
+}
+
+.navbar-default h2 p
+{
+	line-height: 57px;
+}
+
+.navbar-default .navbar-nav > li > a{
+    background-color: transparent !important;
+    padding: 0;
+    line-height: 32px;
+}
+
+.c_menu_toggle 
+{
+    border: medium none !important;
+    border-radius: 4px;
+    float: left;
+    font-size: 25px;
+    padding: 12px 10px;
+    position: relative;
+}
+
+.c_menu_toggle:hover
+{
+	color:#2bb451;
+}
+
+.menu_notification 
+{
+    display: inline-block;
+    padding: 5px 50px;
+    position: relative;
+}
+.menu_notification button
+{
+    border: medium none transparent;
+    color: #185274;
+    font-size: 18px;
+    outline: medium none;
+}
+.badge.c_badge
+{
+    background: #cf3a3a none repeat scroll 0 0;
+    margin-left: -10px;
+    margin-top: 7px;
+    position: absolute;
+}
+
+.menus ul a
+{
+	color: #FFFFFF;
+}
+
+.menus ul a li
+{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 0 -4px;
+    padding: 10px;
+}
+.menus ul a li.active, .menus ul a li:hover, .menus ul a li:focus
+{
+	background-image: linear-gradient(to bottom, #17633d 0px, #11492d 100%);
+}
+
+.people-prop-list
+{
+	border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 0 #ad2d24;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+.bg-gray{
+	background: #d1d1d1;
+}
+.bg-gray a {
+    color: #eaeaea;
+}
+.bg-gray a li:hover {
+    background-image: linear-gradient(to bottom, #b7332a 0px, #941e15 100%);
+}
+
+.bg-login{
+	background: RGBA(0,0,0,0) url("../../images/HUB_2016_SLIDER-1199x499.jpg") no-repeat scroll center top / cover !important;
+}
+
+.login-content {
+    background: transparent none repeat scroll 0 0;
+    margin: 10% auto 0;
+    width: 485px;
+}
+
+.loaderpage .modal-content
+{
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	box-shadow: none;
+	color: #ffffff;
+	font-size: 80px;
+	margin-top:45%;
+}
+
+.main-content
+{
+	margin-top: 51px;
+}
+
+.primarypict-list
+{
+    border-radius: 32px;
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+    width: 32px;
+}
+
+.left-panel
+{
+	background:#e2e2e2;
+	position:fixed;
+	left:0;
+	overflow-y:auto;
+	height:100%;
+	width:210px;
+	z-index:100;
+	
+}
+
+.left-panel .primarypict
+{
+    border-radius: 30px;
+    height: 62px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    position: relative;
+    width: 62px;
+}
+
+.left-panel ul.menulist
+{
+    display: inline;
+    list-style: outside none none;
+    position: relative;
+}
+
+.left-panel ul.menulist > li > a
+{
+	color:#000000;
+	display:block;
+	font-size:12px;
+	padding:10px;
+	text-decoration:none;
+}
+.left-panel ul.menulist > li > a:hover, .left-panel ul.menulist> li > a:focus, .left-panel ul.menulist > li > a.active
+{
+	background: #2bb451;
+	color:#eaeaea;
+	font-weight:bold;
+}
+.content-panel
+{
+	position:relative;
+	margin-left:210px;
+	word-wrap: break-word;
+}
+
+
+
+.content-panel .thumblist
+{
+    color: #008fd0;
+	position: relative;
+}
+.content-panel .thumblist .thumb-title
+{
+	background: none repeat scroll 0 0 #f6f6f6;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+.content-panel .thumblist .thumb-fa-logo
+{
+	font-size: 110px;
+}
+
+.content-panel .thumblist .thumb-img-logo
+{
+	padding-top: 50px;
+}
+.content-panel .thumblist button
+{
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #008fd0;
+    color: #008fd0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+	width:75px;
+}
+.content-panel .thumblist button:hover
+{
+	background-color: #2e3192;
+	color:#fff;
+}
+
+.content-panel .thumblist img
+{
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.content-panel .right-panel-list{
+    box-shadow: 1px 1px 1px 0 #5d5d5d;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.content-panel .right-panel-list .title
+{
+	border-bottom: 1px solid #000000;
+}
+
+.ui-widget-content
+{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: medium none;
+}
+.ui-datepicker
+{
+	padding: 0px;
+}
+.ui-datepicker-calendar th, .ui-datepicker-calendar td, .ui-datepicker-calendar tbody
+{
+	background: none repeat scroll 0 0 #2e3192 !important;
+}
+.ui-datepicker-calendar tr
+{
+	border-bottom: 1px solid #FFFFFF;
+	color: #ffffff !important;
+}
+.ui-datepicker-calendar tr:last-child
+{
+	border:none;
+}
+.ui-datepicker-calendar tr td
+{
+	text-align: center;
+	padding:0 !important;
+	border:0 none !important;
+}
+.ui-datepicker-calendar tr td a
+{ 
+	
+	display:block;
+	text-decoration:none;
+	text-align:center !important;
+	color: #ffffff !important;
+	padding:8px 0;
+}
+.ui-datepicker-calendar tr td a:hover
+{
+	background:#017dc7 none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active 
+{
+	background:#017dc7 none;
+}
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a 
+{
+	background: #017dc7 none;
+}
+.ui-datepicker-header
+{
+	background: none repeat scroll 0 0 #017dc7;
+	border-bottom: 1px solid #fff !important;
+	border-top: 1px solid #fff !important;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px;
+	position:relative;
+	text-align: center;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border:medium none;
+}
+.ui-corner-all
+{
+	border: medium none;
+	border-radius:0px;
+}
+.ui-datepicker .ui-datepicker-prev-hover
+{
+	top: 2px !important;
+	left: 2px !important;	
+}
+.ui-datepicker .ui-datepicker-next-hover
+{
+	top: 2px !important;
+	right: 2px !important;	
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
+{
+	background: none;
+	border: medium none;
+	cursor:pointer;
+	
+}
+
+
+
+.header-content{
+    /*background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)),url("../../images/business-growth.jpg") no-repeat fixed 0% 0 / cover ;*/
+    background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("../../images/business-growth.jpg") no-repeat scroll 0px 80% / cover;
+    min-height: 320px;
+    color: #eaeaea;
+}
+
+
+/*Home Search Row*/
+.input-group input.search, .input-group .input-group-btn .btn-search{
+    height: 50px;
+}
+.input-group .input-group-btn .btn-search{
+    padding: 0 30px;
+}
+
+/* =Connect
+-------------------------------------------------------------- */
+.connect-content
+{
+    border-radius: 5px;
+    margin: 100px auto 0;
+    max-width: 330px;
+	text-align: left;
+}
+.connect-content .connect-title
+{
+	background: none repeat scroll 0 0 #008fd0;
+	border-radius: 5px 5px 0 0;
+    color: #fff;
+	font-size: 20px;
+    padding: 20px;
+	text-align: center;
+}
+
+.connect-content .registration {
+    text-align: center;
+}
+
+/* =Asides
+-------------------------------------------------------------- */
+
+/* =Gallery listing
+-------------------------------------------------------------- */
+
+
+
+/* =Attachment pages
+-------------------------------------------------------------- */
+
+
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+
+
+/* =Widget Areas
+-------------------------------------------------------------- */
+
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+.footer{
+    background: #2d2d2d;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 20px;
+    color: #eaeaea;
+}
+.footer a{
+    text-decoration: underline;
+    color: #eaeaea;
+}
+
+/*------------Custom in bootstrap-----------*/
+.control-label 
+{
+    line-height: 32px;
+}
+.breadcrumb
+{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.breadcrumb > li + li:before
+{
+	content: '|';
+}
+
+
