@@ -113,7 +113,7 @@
                 <div class="white-panel pn-content pd mt">
                     <div class="header-title clearfix">
                         <h4>
-                            <label class="control-label"><span class="fa fa-ticket"></span>&nbsp;Subscription</label>
+                            <label class="control-label"><span class="fa fa-money"></span>&nbsp;My Wallet</label>
                         </h4>
                     </div>
                     <div class="row-fluid pd">
